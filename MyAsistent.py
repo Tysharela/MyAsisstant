@@ -13,18 +13,6 @@ def music():
     pyautogui.click(x=610, y=200, clicks=3, interval = 1.2, button='left')
     pyautogui.click(x=1800, y=0, clicks=1, button='left')
    
-
-def porn():
-    i = random.randint(1, 29700)
-    webbrowser.open_new_tab(f'http://porno365.biz/movie/{i}')
-    size = pyautogui.size()
-    pyautogui.click(x = 800, y = 500, clicks = 2, interval = 1.5, button = 'left')
-
-def gayporn():
-    webbrowser.open_new_tab(f'http://porno365.biz/movie/{i}')
-    size = pyautogui.size()
-    pyautogui.click(x = 800, y = 500, clicks = 2, interval = 1.5, button = 'left')
-
 def close():
     keyboard.send("alt+f4")
 
@@ -68,13 +56,8 @@ def main():
         if query == _music_[i]:
             music()
             return main()
-    if query == 'включить порно':
-        porn()
-        return main()
-    elif query == 'выход':
+    if query == 'выход':
         return 0
-    elif query == 'гей':
-        gay_porn()
     elif query == 'закрыть':
         close()
         return main()
